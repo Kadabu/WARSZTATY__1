@@ -11,7 +11,7 @@ while True:
             raise ValueError
         for i in typowane:           
             i = int(i)
-            if i>49:
+            if i>49 or i<1:
                 print("Liczba spoza zakresu 1-49!")
                 typowane.remove(i)     
             typowane1.append(i)
