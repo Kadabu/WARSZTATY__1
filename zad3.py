@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
-print("Wybierz liczbę od 0 do 1000, a ja ją zgadnę")
+print("Wybierz liczbę od 0 do 1000, a ja ją zgadnę w max 10 próbach")
 my_min = 0
 my_max = 1000
+guess_list = []
 while True:
-    guess = int((my_max - my_min)/2)+my_min
+    guess = int((my_max - my_min) / 2) + my_min
     print("Zgaduję: {}".format(guess))
     print("1 - za mało\n2 - za dużo\n3 - zgadłeś")
     user_resp = input("Odpowiedź: ")
@@ -17,3 +18,6 @@ while True:
         my_min = guess
     else:
         print("Nie oszukuj!")
+    guess_list.append(guess)
+    if len(guess_list) == 10:
+        break

@@ -8,13 +8,13 @@ while True:
         typowane = list(set(typowane_e))
         typowane1 = []
         if len(typowane) != 6:
-            raise ValueError
-        for i in typowane:           
-            i = int(i)
-            if i>49 or i<1:
-                print("Liczba spoza zakresu 1-49!")
-                typowane.remove(i)     
-            typowane1.append(i)
+            raise ValueError("Nie podałeś 6 liczb!")
+        for i in typowane:
+                i = int(i)
+                if i>49 or i<1:
+                    print("Liczba spoza zakresu 1-49!")
+                    typowane.remove(i)
+                typowane1.append(i)
         typowane1.sort()
         wynik = []   
         for i in typowane1:
@@ -27,7 +27,7 @@ while True:
         else:
             print("Spróbuj ponownie :-(")     
     except ValueError:
-        print("Podaj 6 liczb!")
+        print("Nie podałeś 6 liczb!")
 
 
 
